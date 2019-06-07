@@ -7,8 +7,13 @@ $(document).ready(function() {
     docService.getList()
       .then(function(response) {
           let body = JSON.parse(response);
+          let listHold = [];
           for(let d = 0; d < body.data.length; d++){
-          $("#search").append(`<option value='${body.data[d].name}'>${body.data[d].name}</option>`);
+           listHold.push(body.data[d].name);
+          }
+          listHold.sort();
+          for(let j = 0; j < listHold.length; j++){
+              $("#search").append(`<option value='${listHold[j]}'>${listHold[j]}</option>`);
           }
       })
     $('#doctorSearch').click(function() {
@@ -29,19 +34,21 @@ $(document).ready(function() {
                 let streetHold = [];
                 let zipHold = [];
                 let phoneHold = [];
+                let acceptNew = [];
                 if(body.meta.total > 0) {
                     $("#title").html(`<h2>Doctors found that can help with: ${search}</h2>`);
-                    for (var i = 0; i < body.data[0].practices.length; i++) {
-                        nameHold.push(body.data[0].practices[i].name);
-                        cityHold.push(body.data[0].practices[i].visit_address.city);
-                        stateHold.push(body.data[0].practices[i].visit_address.state);
-                        streetHold.push(body.data[0].practices[i].visit_address.street);
-                        zipHold.push(body.data[0].practices[i].visit_address.zip);
-                        phoneHold.push(body.data[0].practices[i].phones[0].number);
+                    for (var i = 0; i < body.data.length; i++) {
+                        nameHold.push(body.data[i].practices[0].name);
+                        cityHold.push(body.data[i].practices[0].visit_address.city);
+                        stateHold.push(body.data[i].practices[0].visit_address.state);
+                        streetHold.push(body.data[i].practices[0].visit_address.street);
+                        zipHold.push(body.data[i].practices[0].visit_address.zip);
+                        phoneHold.push(body.data[i].practices[0].phones.number);
+                        acceptNew.push(body.data[i].practices[0].accepts_new_patients)
                         $("#docs").append(`<div id='doc${i}'></div>`);
                     }
                     for (var x = 0; x < nameHold.length; x++) {
-                        $(`#doc${x}`).html(`Name: ${nameHold[x]}<br>Address: ${streetHold[x]}, ${cityHold[x]}, ${stateHold[x]}, ${zipHold[x]} <br> Phone Number: ${phoneHold[x]}`);
+                        $(`#doc${x}`).html(`Name: ${nameHold[x]}<br>Address: ${streetHold[x]}, ${cityHold[x]}, ${stateHold[x]}, ${zipHold[x]} <br> Phone Number: ${phoneHold[x]} <br> Accepting new: ${acceptNew[x]}`);
                     }
                 }else $(".errors").html(`<h2>No doctors found with the name ${name} and the symptom of ${search}</h2>`);
                // return weatherService.hourCall(city);
