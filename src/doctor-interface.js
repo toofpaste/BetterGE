@@ -55,7 +55,7 @@ $(document).ready(function() {
             stateHold.push(body.data[i].practices[0].visit_address.state);
             streetHold.push(body.data[i].practices[0].visit_address.street);
             zipHold.push(body.data[i].practices[0].visit_address.zip);
-            phoneHold.push(body.data[i].practices[0].phones.number);
+            phoneHold.push(body.data[i].practices[0].phones[0].number);
             acceptNew.push(body.data[i].practices[0].accepts_new_patients);
             $("#docs").append(`<div id='doc${i}'></div>`);
           }

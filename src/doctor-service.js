@@ -55,7 +55,7 @@ export class DoctorService {
     redditMed(search){
         return new Promise(function(resolve, reject) {
             let request = new XMLHttpRequest();
-            let url = `https://www.reddit.com/r/AskDocs/new.json?limit=25/search/?q=${search}&restrict_sr=1&sort=relevance`;
+            let url = `https://www.reddit.com/r/AskDocs/search.json?q=${search}&restrict_sr=on`;
 
             request.onload = function() {
                 if (this.status === 200) {

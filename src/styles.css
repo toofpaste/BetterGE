@@ -9,6 +9,15 @@ body{
     font-size: 30px;
     color: blue;
 }
+#redTop{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    grid-gap: 6px;
+    height: 30em;
+    text-align: left;
+    font-size: 2vw;
+}
 #docs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
