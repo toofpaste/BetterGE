@@ -1,19 +1,25 @@
 <head>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="doctor-interface.js"></script>
-<!--    <link href="styles.css" rel="stylesheet" type="text/css">-->
-    <title>Daily Fun</title>
+
+    <title>Doctor Lookup</title>
 </head>
 <body>
-
+<nav class="navbar navbar-light bg-light" id = "nav">
+    <a class="navbar-brand" href="#">
+        <img src="http://nationalpainreport.com/wp-content/uploads/2014/07/bigstock-Doctor-physician-Isolated-ov-33908342-e1446160270762.jpg" width="90" height="60" class="d-inline-block align-top" alt="">
+        Doctor Lookup
+    </a>
+</nav>
 <div class="container">
     <h1>Find a doctor</h1>
     <label for="city">Enter a City:</label>
     <input id="city" type="text">
-    <label for="search">Enter a Symptom:</label>
+    <br>
+    <label for="search">Choose a Symptom:</label>
     <select id="search"></select>
     <br>
-    <label for="name">Enter a Name:</label>
+    <label for="name">Enter a Doctors Name:</label>
     <input id="name" type="text">
     <button class="btn-success" id="doctorSearch">Get Information</button>
 

@@ -33,14 +33,11 @@ $(document).ready(function() {
               let lat1 = body.results[0].locations[0].latLng.lat;
               let lon = lon1.toString();
               let lat = lat1.toString();
-              console.log(lon);
-              console.log(lat);
               return docService.docCall(search, name, lon, lat);
 
           })
 
             .then(function(response) {
-                console.log(response);
                 let body = JSON.parse(response);
                 let nameHold = [];
                 let cityHold = [];

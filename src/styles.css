@@ -1,6 +1,14 @@
 body{
     background-color: white;
 }
+#nav{
+    background-color: slategray;
+    color: white;
+}
+a{
+    font-size: 30px;
+    color: white;
+}
 #docs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
