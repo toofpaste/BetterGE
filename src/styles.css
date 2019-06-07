@@ -1,59 +1,12 @@
 body{
     background-color: white;
 }
-#hourly {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 3px;
-    height: 30em;
-    text-align: left;
-    font-size: 1vw;
-}
-#picNew{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 10px;
-    height: 30em;
-    width: 30em;
-    text-align: left;
-    font-size: 1vw;
-}
-#subRed{
+#docs {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-gap: 10px;
-    height: 30em;
-    width: 30em;
-    text-align: left;
-    font-size: 1vw;
-}
-#subRed h1 a{
-    color: white;
-    background-color: black;
-    text-align: center;
-}
-#redPics{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
     grid-gap: 3px;
     height: 30em;
     text-align: left;
-    font-size: 1vw;
-}
-#redPics img{
-    height: 15vw;
-    width: 15vw;
-}
-#redNews {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 3px;
-    height: 30em;
-    text-align: left;
-    font-size: 1vw;
+    font-size: 2vw;
 }

@@ -1,42 +1,22 @@
 <head>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="./weather-interface.js"></script>
+    <script type="text/javascript" src="doctor-interface.js"></script>
 <!--    <link href="styles.css" rel="stylesheet" type="text/css">-->
     <title>Daily Fun</title>
 </head>
 <body>
 
 <div class="container">
-    <h1>Start Your Day Off Right!</h1>
-    <label for="location">Enter a location:</label>
-    <input id="location" type="text">
-    <label for="redSub"> Enter A Search Term</label>
-    <input id="redSub" type="text">
-    <button class="btn-success" id="weatherLocation">Get Information</button>
+    <h1>Find a doctor</h1>
+    <label for="search">Enter a Symptom:</label>
+    <input id="search" type="text">
+
+    <label for="name">Enter a Name:</label>
+    <input id="name" type="text">
+    <button class="btn-success" id="doctorSearch">Get Information</button>
 
     <div class="errors"></div>
-    <div class="showSky"></div>
-    <div class="showHumidity"></div>
-    <div class="showTemp"></div>
-    <div class ="showImage"></div>
-    <h1>HOURLY FORECAST FOR NEXT 4 DAYS</h1><br>
-    <div id="hourly"></div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <h1>TOP REDDIT NEWS FOR THE DAY</h1>
-    <div id="redNews"></div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-
-    <h1>TOP REDDIT PICTURES FOR THE DAY</h1>
-    <div id="redPics"></div>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1>FOUND THESE SUBREDDITS FOR YOU</h1>
-    <div id="subRed"></div>
-
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <h1>FOUND THESE PICTURES FOR YOU</h1>
-    <div id="picNew"></div>
+    <div id="docs"></div>
 </div>
 </body>
 </html>
