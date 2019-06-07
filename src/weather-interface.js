@@ -64,34 +64,6 @@ $(document).ready(function() {
                 $('.showImage').html(`<img src='${image}'>`);
                 return weatherService.redditNews();
             })
-            // .then(function(response){
-            //
-            //     let newsInfo = JSON.parse(response);
-            //     let titles = [];
-            //     let link = [];
-            //     let descr = [];
-            //     let img2 = [];
-            //     let e = 0;
-            //     for(let w = 0; w < newsInfo.articles.length; w++){
-            //         titles.push(newsInfo.articles[w].title);
-            //         descr.push(newsInfo.articles[w].description);
-            //         link.push(newsInfo.articles[w].url);
-            //         img2.push(newsInfo.articles[w].urlToImage);
-            //         if(w % 6 === 0 && w >= 6){
-            //             e++;
-            //         }
-            //         console.log(e);
-            //         $("#news").append("<div id=" + e + "story" + w + "></div>");
-            //     }
-            //     let r = 0;
-            //     for(let t = 0; t < titles.length; t++){
-            //         if(t % 6 === 0 && t >= 6){
-            //             r++;
-            //         }
-            //         $("#"+r+"story"+t).html(`<img src ='${img2[t]}'> <br><h3>${titles[t]}</h3><br><p>${descr[t]}</p><br><a href='${link[t]}'>Read More</a>'`);
-            //     }
-            //     return weatherService.redditNews();
-            // })
             .then(function(response){
                 let redditNew = JSON.parse(response);
                 let titles = [];

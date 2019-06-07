@@ -55,23 +55,6 @@ export class WeatherService {
             request.send();
         });
     }
-    // newsToday(){
-    //     return new Promise(function(resolve, reject) {
-    //         let request = new XMLHttpRequest();
-    //         let url = `https://newsapi.org/v2/everything?q=bitcoin&from=2019-05-05&sortBy=publishedAt&apiKey=64d113d64b384f279f4ac290c6a58bfe`
-    //
-    //         request.onload = function() {
-    //             if (this.status === 200) {
-    //                 resolve(request.response);
-    //             } else {
-    //                 reject(Error(request.statusText));
-    //             }
-    //         }
-    //
-    //         request.open("GET", url, true);
-    //         request.send();
-    //     });
-    // }
     redditNews(){
         return new Promise(function(resolve, reject) {
             let request = new XMLHttpRequest();
