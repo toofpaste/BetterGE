@@ -52,4 +52,21 @@ export class DoctorService {
             request.send();
         });
     }
+    redditMed(search){
+        return new Promise(function(resolve, reject) {
+            let request = new XMLHttpRequest();
+            let url = `https://www.reddit.com/r/AskDocs/new.json?limit=25/search/?q=${search}&restrict_sr=1&sort=relevance`;
+
+            request.onload = function() {
+                if (this.status === 200) {
+                    resolve(request.response);
+                } else {
+                    reject(Error(request.statusText));
+                }
+            }
+
+            request.open("GET", url, true);
+            request.send();
+        });
+    }
 }

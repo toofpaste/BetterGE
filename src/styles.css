@@ -3,11 +3,11 @@ body{
 }
 #nav{
     background-color: slategray;
-    color: white;
+    color: blue;
 }
-a{
+#nav a{
     font-size: 30px;
-    color: white;
+    color: blue;
 }
 #docs {
     display: grid;
