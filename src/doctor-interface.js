@@ -20,13 +20,27 @@ $(document).ready(function() {
         $(".errors").empty();
         $("#title").empty();
         $("#docs").empty();
+        let city = $("#city").val();
+        $("#city").val("");
         let search = $('#search').val();
         $('#search').val("");
         let name = $('#name').val();
         $('#name').val("");
+        docService.getGeo(city)
+          .then(function(response){
+              let body = JSON.parse(response);
+              let lon1 = body.results[0].locations[0].latLng.lng;
+              let lat1 = body.results[0].locations[0].latLng.lat;
+              let lon = lon1.toString();
+              let lat = lat1.toString();
+              console.log(lon);
+              console.log(lat);
+              return docService.docCall(search, name, lon, lat);
 
-       docService.docCall(search, name)
+          })
+
             .then(function(response) {
+                console.log(response);
                 let body = JSON.parse(response);
                 let nameHold = [];
                 let cityHold = [];
