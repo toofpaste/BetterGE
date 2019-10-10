@@ -1,32 +1,51 @@
 <head>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="doctor-interface.js"></script>
+    <script src="//localhost:8080/require/client"></script>
 
     <title>Doctor Lookup</title>
 </head>
 <body>
-<nav class="navbar navbar-light bg-light" id = "nav">
-    <a class="navbar-brand" href="#">
-        <img src="http://nationalpainreport.com/wp-content/uploads/2014/07/bigstock-Doctor-physician-Isolated-ov-33908342-e1446160270762.jpg" width="90" height="60" class="d-inline-block align-top" alt="">
-        Doctor Lookup
-    </a>
-</nav>
 <div class="container">
-    <h1>Find a doctor</h1>
-    <label for="city">Enter a City:</label>
-    <input id="city" type="text">
-    <br>
-    <label for="search">Choose a Symptom:</label>
-    <select id="search"></select>
-    <br>
-    <label for="name">Enter a Doctors Name:</label>
-    <input id="name" type="text">
-    <button class="btn-success" id="doctorSearch">Get Information</button>
 
-    <div class="errors"></div>
-    <div id="title"></div>
-    <div id="docs"></div>
-    <div id="redTop"></div>
+    <form>
+        <p>Input Amount of money you have (leave empty for all items)</p>
+        <input id="bank" name="bank" type="number" placeholder="GP AMOUNT">
+        <button id="reset1" type="submit">Submit</button>
+    </form>
+    <img id="loading">
+    <div id="list1">
+    <div id="qb1">
+        <h3>Overall Highest Margin Flips</h3>
+        <h3>CHECK THE NATURE RUNE COST TO MAKE SURE ITS WORKING</h3>
+        <h2 id="natRune"></h2>
+        <button id="quick">Quick Flips</button>
+        <button id="hour">Profit/Hour</button>
+        <button id="bulk">Bulk Flips</button>
+        <button id="reset">Update Prices</button>
+        <div id="qbsDraft">
+            <table id="qbTable">
+                <th>Item</th>
+                <th>avg price</th>
+                <th>offer price</th>
+                <th>sell price</th>
+                <th><button id="profit">profit made</button></th>
+                <th><button id="roi" style="background-color: transparent">roi</button></th>
+                <th><button id="buy" style="background-color: transparent">Buying quantity per Hour</button></th>
+                <th><button id="sell" style="background-color: transparent">Selling quantity per Hour</button></th>
+                <th><button id="overall" style="background-color: transparent">Overall Qunatity per Hour</button></th>
+                <th><button id="buysell" style="background-color: transparent">buy/sell ratio</button></th>
+                <th><button id="alch" style="background-color: transparent">Alch Profits</button></th>
+                <th><button style="background-color: transparent">Alch Value</button></th>
+                <th><button id="limit" style="background-color: transparent">GE Limit</button></th>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</div>
 </div>
 </body>
 </html>

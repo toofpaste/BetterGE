@@ -8,7 +8,8 @@
     "buildDist": "webpack --mode production",
     "prestart": "webpack",
     "start": "webpack-dev-server --open",
-    "lint": "eslint src/**/*.js & exit 0"
+    "lint": "eslint src/**/*.js & exit 0",
+    "build-serve": "node --max_old_space_size=8048 ./node_modules/@angular/cli/bin/ng serve"
   },
   "author": "",
   "license": "ISC",
@@ -32,9 +33,13 @@
   },
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "fantasydata-api": "^1.3.3",
     "jquery": "^3.4.1",
     "jquery.terminal": "^2.6.2",
-    "popper.js": "^1.15.0"
+    "mysportsfeeds-node": "^2.0.1",
+    "papaparse": "^5.0.2",
+    "popper.js": "^1.15.0",
+    "require": "^2.4.20"
   },
   "directories": {
     "test": "test"

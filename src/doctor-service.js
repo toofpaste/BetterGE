@@ -1,10 +1,13 @@
-let apiKey = "87ba8f96382f5e689a7ae52826597cea";
-let geoKey = "ypc9xVgSwr5BYgsuAKhfheVA4wqBgSrI";
+//let apiKey = "87ba8f96382f5e689a7ae52826597cea";
+//let geoKey = "ypc9xVgSwr5BYgsuAKhfheVA4wqBgSrI";
+//1st month :
 export class DoctorService {
-    getList(){
+
+    getItems(){
         return new Promise(function(resolve, reject) {
             let request = new XMLHttpRequest();
-            let url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${apiKey}`;
+            //let url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${apiKey}`;
+            let url = `https://rsbuddy.com/exchange/summary.json`;
 
             request.onload = function() {
                 if (this.status === 200) {
@@ -18,10 +21,11 @@ export class DoctorService {
             request.send();
         });
     }
-    getGeo(city){
+    moreInfo(item){
         return new Promise(function(resolve, reject) {
             let request = new XMLHttpRequest();
-            let url = `http://open.mapquestapi.com/geocoding/v1/address?key=${geoKey}&location=${city}`;
+            //let url = `https://api.betterdoctor.com/2016-03-01/conditions?user_key=${apiKey}`;
+            let url = `https://www.osrsbox.com/osrsbox-db/items-json/${item}.json`;
 
             request.onload = function() {
                 if (this.status === 200) {
@@ -35,38 +39,6 @@ export class DoctorService {
             request.send();
         });
     }
-    docCall(search, name, lon, lat) {
-        return new Promise(function(resolve, reject) {
-            let request = new XMLHttpRequest();
-            let url = `https://api.betterdoctor.com/2016-03-01/doctors?name=${name}&query=${search}&location=${lat}%2C${lon}%2C100&skip=0&limit=10&user_key=${apiKey}`;
 
-            request.onload = function() {
-                if (this.status === 200) {
-                    resolve(request.response);
-                } else {
-                    reject(Error(request.statusText));
-                }
-            }
 
-            request.open("GET", url, true);
-            request.send();
-        });
-    }
-    redditMed(search){
-        return new Promise(function(resolve, reject) {
-            let request = new XMLHttpRequest();
-            let url = `https://www.reddit.com/r/AskDocs/search.json?q=${search}&restrict_sr=on`;
-
-            request.onload = function() {
-                if (this.status === 200) {
-                    resolve(request.response);
-                } else {
-                    reject(Error(request.statusText));
-                }
-            }
-
-            request.open("GET", url, true);
-            request.send();
-        });
-    }
 }

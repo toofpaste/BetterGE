@@ -10,10 +10,7 @@
     "jquery": true
   },
   "rules": {
-    "semi": 1,
-    "indent": ["warn", 2],
-    "no-console": "warn",
-    "no-debugger": "warn",
-    "no-unused-vars": 1
+    "no-console": "off",
+    "no-unused-vars": "off"
   }
 }

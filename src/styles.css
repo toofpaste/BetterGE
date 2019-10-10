@@ -1,29 +1,81 @@
 body{
-    background-color: white;
+    background-color: #e7dfdd;
 }
-#nav{
-    background-color: slategray;
-    color: blue;
-}
-#nav a{
-    font-size: 30px;
-    color: blue;
-}
-#redTop{
+#list1{
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-gap: 6px;
-    height: 30em;
-    text-align: left;
-    font-size: 2vw;
+    grid-column-gap: 10px;
 }
-#docs {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto;
-    grid-gap: 3px;
-    height: 30em;
-    text-align: left;
-    font-size: 2vw;
+#profit{
+    background-color: transparent;
+}
+.hideStuff{
+display: none
+}
+.showStuff{
+    visibility: visible;
+}
+.permRed{
+    background-color: red;
+}
+.colorRed{
+    background-color: red;
+}
+.colorGreen{
+ background-color: green;
+}
+.colorWhite{
+    background-color: transparent;
+}
+th{
+    padding: 2px;
+    border: 1px solid black;
+    background-color: lightslategrey;
+}
+td{
+    padding: 2px;
+    border: 1px solid black;
+    background-color: antiquewhite;
+}
+
+#qb1{
+    grid-column: 1;
+    grid-row: 1;
+}
+#rb1{
+    grid-column: 1;
+    grid-row: 2;
+}
+#wr1{
+    grid-column: 1;
+    grid-row: 3;
+}
+#k1{
+    grid-column: 1;
+    grid-row: 4;
+}
+#title1{
+    position: center;
+    text-align: center;
+}
+#title2{
+    position: center;
+    text-align: center;
+}
+
+#rb1 div{
+    grid-column: 1;
+    grid-row: 1;
+}
+#qb1 div{
+    grid-column: 1;
+    grid-row: 1;
+}
+#k1 div{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+#wr1 div{
+    grid-column: 1;
+    grid-row: 1;
 }
